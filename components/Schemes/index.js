@@ -3,13 +3,14 @@ import Collapse from "../Collapse"
 const Block = ({ color, text, children}) => {
     return(
         <div
-            className="flex w-full h-14 text-xs px-2 py-2 truncate"
+            className="flex flex-col items-start w-full h-16 text-xs px-2 py-2 truncate"
             style={{
                 color: text,
                 backgroundColor: color
             }}
         >
             {children}
+            <span className="opacity-50 mt-1">{color}</span>
         </div>
     )
 }
