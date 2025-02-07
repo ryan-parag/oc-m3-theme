@@ -1,4 +1,5 @@
 import OCLogo from "@/components/OCLogo";
+import MasoniteLogo from "../MasoniteLogo";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 
@@ -10,6 +11,31 @@ const NavItem = ({ href, label, active }) => {
                 <span className="text-body-large w-full flex-1">{label}</span>
             </div>
         </Link>
+    )
+}
+
+const LogoRender = ({ company }) => {
+
+    const getLogo = (x) => {
+        switch(x) {
+            case 'Masonite':
+                return <MasoniteLogo/>
+                break;
+            case 'Owens Corning':
+                return <OCLogo/>
+                break;
+            default:
+                return null
+                break;
+        }
+    }
+
+    return(
+        <>
+            {
+                getLogo(company)
+            }
+        </>
     )
 }
 
@@ -67,7 +93,12 @@ const Sidebar = () => {
                         <div key={i} className="grid grid-cols-1 gap-1">
                             {
                                 item.group !== null && (
-                                    <div className="text-on-surface-variant text-label-large my-1">{item.group}</div>
+                                    <div className="text-on-surface-variant text-label-large my-1 flex flex-row items-center px-4">
+                                        <div className="h-6 w-6 mr-2 rounded-full overflow-hidden">
+                                            <LogoRender company={item.group}/>
+                                        </div>
+                                        <span className="opacity-60 font-medium">{item.group}</span>
+                                    </div>
                                 )
                             }
                             {
