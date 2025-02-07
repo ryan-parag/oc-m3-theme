@@ -166,7 +166,7 @@ export const palette = {
 
 export const theme = {
     "coreColors": {
-        "primary": "#D40F7D"
+        "primary": "#92C83E"
     },
     "schemes": {
         "light": {
