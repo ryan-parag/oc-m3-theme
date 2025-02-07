@@ -1,8 +1,6 @@
-import { palette, theme } from "@/data/oc";
 import Sidebar from "@/components/Sidebar";
-import Palette from "@/components/Palette";
 
-export default function Home() {
+export default function Page() {
 
   return (
     <div className="flex flex-row w-full h-screen">

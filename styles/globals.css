@@ -2,20 +2,450 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html, body {
+  @apply h-full w-full;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.ring-transparent {
+  box-shadow: none !important;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Primary */
+
+.bg-primary {
+  @apply bg-primary-40 dark:bg-primary-80;
+}
+
+.text-primary {
+  @apply text-primary-40 dark:text-primary-80;
+}
+
+.bg-on-primary {
+  @apply bg-primary-100 dark:bg-primary-10;
+}
+
+.text-on-primary {
+  @apply text-primary-100 dark:text-primary-10;
+}
+
+.bg-primary-container-low {
+  @apply bg-primary-A89 dark:bg-primary-A19;
+}
+
+.text-primary-container-low {
+  @apply text-primary-A89 dark:text-primary-A19;
+}
+
+.bg-on-primary-container-low {
+  @apply bg-primary-40 dark:bg-primary-80;
+}
+
+.text-on-primary-container-low {
+  @apply text-primary-40 dark:text-primary-80;
+}
+
+.bg-primary-container-high {
+  @apply bg-primary-90 dark:bg-primary-40;
+}
+
+.text-primary-container-low {
+  @apply text-primary-90 dark:text-primary-40;
+}
+
+.bg-on-primary-container-high {
+  @apply bg-primary-10 dark:bg-primary-99;
+}
+
+.text-on-primary-container-high {
+  @apply text-primary-10 dark:text-primary-99;
+}
+
+/* Secondary */
+
+.bg-secondary {
+  @apply bg-secondary-40 dark:bg-secondary-80;
+}
+
+.text-secondary {
+  @apply text-secondary-40 dark:text-secondary-80;
+}
+
+.bg-on-secondary {
+  @apply bg-secondary-100 dark:bg-secondary-10;
+}
+
+.text-on-secondary {
+  @apply text-secondary-100 dark:text-secondary-10;
+}
+
+.bg-secondary-container {
+  @apply bg-secondary-90 dark:bg-secondary-30;
+}
+
+.text-secondary-container {
+  @apply text-secondary-90 dark:text-secondary-30;
+}
+
+.bg-on-secondary-container {
+  @apply bg-secondary-10 dark:bg-secondary-90;
+}
+
+.text-on-secondary-container {
+  @apply text-secondary-10 dark:text-secondary-90;
+}
+
+/* Outline */
+
+.border-outline {
+  @apply border-neutral-variant-50 dark:border-neutral-60;
+}
+
+.border-outline-variant {
+  @apply border-neutral-variant-80 dark:border-neutral-variant-40;
+}
+
+/* Surface */
+
+.bg-surface-dim {
+  @apply bg-neutral-87 dark:bg-neutral-A15;
+}
+
+.bg-surface {
+  @apply bg-neutral-A90 dark:bg-neutral-A15;
+}
+
+.bg-surface-variant {
+  @apply bg-neutral-90 dark:bg-neutral-30;
+}
+
+.text-on-surface {
+  @apply text-neutral-10 dark:text-neutral-99;
+}
+
+.text-on-surface-variant {
+  @apply text-neutral-30 dark:text-neutral-80;
+}
+
+.bg-surface-bright {
+  @apply bg-neutral-A90 dark:bg-neutral-A12;
+}
+
+.bg-surface-container-highest {
+  @apply bg-neutral-99 dark:bg-neutral-10;
+}
+
+.border-surface-container-highest {
+  @apply border-neutral-99 dark:border-neutral-10;
+}
+
+.bg-surface-container-high {
+  @apply bg-neutral-A96 dark:bg-neutral-A10;
+}
+
+.border-surface-container-high {
+  @apply border-neutral-A96 dark:border-neutral-A10;
+}
+
+.bg-surface-container {
+  @apply bg-neutral-A94 dark:bg-neutral-A11;
+}
+
+.border-surface-container {
+  @apply border-neutral-A94 dark:border-neutral-A11;
+}
+
+.bg-surface-container-low {
+  @apply bg-neutral-A92 dark:bg-neutral-A12;
+}
+
+.border-surface-container-low {
+  @apply border-neutral-A92 dark:border-neutral-A12;
+}
+
+.bg-surface-container-lowest {
+  @apply bg-neutral-A91 dark:bg-neutral-A13;
+}
+
+.border-surface-container-lowest {
+  @apply border-neutral-A91 dark:border-neutral-A13;
+}
+
+/* Inverse */
+
+.bg-inverse-surface {
+  @apply bg-neutral-20 dark:bg-neutral-90;
+}
+
+.text-inverse-surface {
+  @apply text-neutral-20 dark:text-neutral-90;
+}
+
+.bg-on-inverse-surface {
+  @apply bg-neutral-95 dark:bg-neutral-10;
+}
+
+.text-on-inverse-surface {
+  @apply text-neutral-95 dark:text-neutral-10;
+}
+
+.bg-inverse-primary {
+  @apply bg-primary-80 dark:bg-primary-40;
+}
+
+.text-inverse-primary {
+  @apply text-primary-80 dark:text-primary-40;
+}
+
+/* Error */
+
+.bg-error {
+  @apply bg-error-40 dark:bg-error-80;
+}
+
+.text-error {
+  @apply text-error-40 dark:text-error-80;
+}
+
+.bg-on-error {
+  @apply bg-error-100 dark:bg-error-10;
+}
+
+.text-on-error {
+  @apply text-error-100 dark:text-error-10;
+}
+
+.bg-error-container-low {
+  @apply bg-error-A89 dark:bg-error-A19;
+}
+
+.text-error-container-low {
+  @apply text-error-A89 dark:text-error-A19;
+}
+
+.bg-on-error-container-low {
+  @apply bg-error-40 dark:bg-error-80;
+}
+
+.text-on-error-container-low {
+  @apply text-error-40 dark:text-error-80;
+}
+
+.bg-error-container-high {
+  @apply bg-error-90 dark:bg-error-40;
+}
+
+.text-error-container-high {
+  @apply text-error-90 dark:text-error-40;
+}
+
+.bg-on-error-container-high {
+  @apply bg-error-10 dark:bg-error-99;
+}
+
+.text-on-error-container-high {
+  @apply text-error-10 dark:text-error-99;
+}
+
+/* Info */
+
+.bg-info {
+  @apply bg-info-40 dark:bg-info-80;
+}
+
+.text-info {
+  @apply text-info-40 dark:text-info-80;
+}
+
+.bg-on-info {
+  @apply bg-info-100 dark:bg-info-10;
+}
+
+.text-on-info {
+  @apply text-info-100 dark:text-info-10;
+}
+
+.bg-info-container-low {
+  @apply bg-info-A89 dark:bg-info-A19;
+}
+
+.text-info-container-low {
+  @apply text-info-A89 dark:text-info-A19;
+}
+
+.bg-on-info-container-low {
+  @apply bg-info-40 dark:bg-info-80;
+}
+
+.text-on-info-container-low {
+  @apply text-info-40 dark:text-info-80;
+}
+
+.bg-info-container-high {
+  @apply bg-info-90 dark:bg-info-40;
+}
+
+.text-info-container-high {
+  @apply text-info-90 dark:text-info-40;
+}
+
+.bg-on-info-container-high {
+  @apply bg-info-10 dark:bg-info-99;
+}
+
+.text-on-info-container-high {
+  @apply text-info-10 dark:text-info-99;
+}
+
+/* Warning */
+
+.bg-warning {
+  @apply bg-warning-40 dark:bg-warning-80;
+}
+
+.text-warning {
+  @apply text-warning-40 dark:text-warning-80;
+}
+
+.bg-on-warning {
+  @apply bg-warning-100 dark:bg-warning-10;
+}
+
+.text-on-warning {
+  @apply text-warning-100 dark:text-warning-10;
+}
+
+.bg-warning-container-low {
+  @apply bg-warning-A89 dark:bg-warning-A19;
+}
+
+.text-warning-container-low {
+  @apply text-warning-A89 dark:text-warning-A19;
+}
+
+.bg-on-warning-container-low {
+  @apply bg-warning-40 dark:bg-warning-80;
+}
+
+.text-on-warning-container-low {
+  @apply text-warning-40 dark:text-warning-80;
+}
+
+.bg-warning-container-high {
+  @apply bg-warning-90 dark:bg-warning-40;
+}
+
+.text-warning-container-high {
+  @apply text-warning-90 dark:text-warning-40;
+}
+
+.bg-on-warning-container-high {
+  @apply bg-warning-10 dark:bg-warning-99;
+}
+
+.text-on-warning-container-high {
+  @apply text-warning-10 dark:text-warning-99;
+}
+
+/* Success */
+
+.bg-success {
+  @apply bg-success-40 dark:bg-success-80;
+}
+
+.text-success {
+  @apply text-success-40 dark:text-success-80;
+}
+
+.bg-on-success {
+  @apply bg-success-100 dark:bg-success-10;
+}
+
+.text-on-success {
+  @apply text-success-100 dark:text-success-10;
+}
+
+.bg-success-container-low {
+  @apply bg-success-A89 dark:bg-success-A19;
+}
+
+.text-success-container-low {
+  @apply text-success-A89 dark:text-success-A19;
+}
+
+.bg-on-success-container-low {
+  @apply bg-success-40 dark:bg-success-80;
+}
+
+.text-on-success-container-low {
+  @apply text-success-40 dark:text-success-80;
+}
+
+.bg-success-container-high {
+  @apply bg-success-90 dark:bg-success-40;
+}
+
+.text-success-container-high {
+  @apply text-success-90 dark:text-success-40;
+}
+
+.bg-on-success-container-high {
+  @apply bg-success-10 dark:bg-success-99;
+}
+
+.text-on-success-container-high {
+  @apply text-success-10 dark:text-success-99;
+}
+
+/* MDX */
+
+.mdx {
+  @apply leading-relaxed
+}
+
+.mdx h1 {
+  @apply text-headline-small
+}
+
+.mdx h2 {
+  @apply text-title-large
+}
+
+.mdx h3 {
+  @apply text-title-medium
+}
+
+.mdx h4 {
+  @apply text-title-small
+}
+
+.mdx p {
+  @apply text-body-large
+}
+
+.mdx p a {
+  @apply transition inline-flex text-primary-40 dark:text-primary-70 px-1 rounded-md hover:bg-primary-95 dark:hover:bg-primary-20
+}
+
+.mdx ul {
+  @apply list-disc
+}
+
+.mdx ol {
+  @apply list-decimal
+}
+
+.mdx ol, .mdx ul {
+  @apply pl-4 pb-6
+}
+
+.mdx li {
+  @apply my-3
+}
+
+.mdx h1, .mdx h2, .mdx h3, .mdx h4, .mdx h5, .mdx h6, .mdx p, .mdx ul, .mdx ol {
+  @apply mb-4;
+} 
+
+.mdx hr {
+  @apply border-outline-variant my-6
 }
