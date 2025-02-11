@@ -1,6 +1,6 @@
 import Sidebar from "@/components/Sidebar";
-import Schemes from "@/components/Schemes";
-import { theme } from "@/data/oc";
+import M3Schemes from "@/components/M3Schemes";
+import { theme } from "@/data/material-3/oc";
 
 export default function Page() {
 
@@ -25,8 +25,8 @@ export default function Page() {
               </a>
           </header>
           <div className="rounded-lg border border-outline-variant overflow-hidden">
-            <Schemes theme={theme.schemes.light} mode="Light mode"/>
-            <Schemes theme={theme.schemes.dark} mode="Dark mode"/>
+            <M3Schemes theme={theme.schemes.light} mode="Light mode"/>
+            <M3Schemes theme={theme.schemes.dark} mode="Dark mode"/>
           </div>
         </div>
       </main>

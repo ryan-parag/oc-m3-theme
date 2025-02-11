@@ -1,6 +1,6 @@
-import { palette, theme } from "@/data/oc";
+import { palette, theme } from "@/data/material-2/masonite";
 import Sidebar from "@/components/Sidebar";
-import Palette from "@/components/Palette";
+import M2Palette from "@/components/M2Palette";
 
 export default function Page() {
 
@@ -9,7 +9,7 @@ export default function Page() {
       <Sidebar/>
       <main className="w-full flex-1 h-full overflow-y-auto">
         <div className="max-w-5xl mx-auto pt-5 px-4">
-          <Palette palette={palette} company={'owens-corning'}/>
+            <M2Palette company="masonite" palette={palette.scales}/>
         </div>
       </main>
     </div>

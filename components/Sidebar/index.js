@@ -3,12 +3,19 @@ import MasoniteLogo from "../MasoniteLogo";
 import Link from "next/link";
 import { usePathname } from 'next/navigation'
 
-const NavItem = ({ href, label, active }) => {
+const NavItem = ({ href, label, active, version }) => {
 
     return(
         <Link href={href}>
             <div className={`transition rounded-lg flex items-center px-4 py-3 h-12 ${active ? 'bg-primary-container-low text-on-primary-container-low' : 'bg-transparent hover:bg-neutral-99 dark:hover:bg-neutral-10 text-on-surface-variant'}`}>
-                <span className="text-body-large w-full flex-1">{label}</span>
+                <div className="flex flex-col w-full items-start">
+                    {
+                        version && (
+                            <span className="text-xs text-on-surface-variant">{version}</span>
+                        )
+                    }
+                    <span className="text-body-large w-full flex-1">{label}</span>
+                </div>
             </div>
         </Link>
     )
@@ -49,7 +56,8 @@ const Sidebar = () => {
             items: [
                 {
                     name: 'Home',
-                    route: '/'
+                    route: '/',
+                    version: false
                 }
             ]
         }, {
@@ -57,10 +65,12 @@ const Sidebar = () => {
             items: [
                 {
                     name: 'Color Scales',
-                    route: '/owens-corning/color-scales'
+                    route: '/owens-corning/material-3/color-scales',
+                    version: 'Material 3'
                 }, {
                     name: 'Schemes and Tokens',
-                    route: '/owens-corning/schemes-and-tokens'
+                    route: '/owens-corning/material-3/schemes-and-tokens',
+                    version: 'Material 3'
                 }
             ]
         }, {
@@ -68,10 +78,20 @@ const Sidebar = () => {
             items: [
                 {
                     name: 'Color Scales',
-                    route: '/masonite/color-scales'
+                    route: '/masonite/material-2/color-scales',
+                    version: 'Material 2'
                 }, {
                     name: 'Schemes and Tokens',
-                    route: '/masonite/schemes-and-tokens'
+                    route: '/masonite/material-2/schemes-and-tokens',
+                    version: 'Material 2'
+                }, {
+                    name: 'Color Scales',
+                    route: '/masonite/material-3/color-scales',
+                    version: 'Material 3'
+                }, {
+                    name: 'Schemes and Tokens',
+                    route: '/masonite/material-3/schemes-and-tokens',
+                    version: 'Material 3'
                 }
             ]
         }
@@ -93,7 +113,7 @@ const Sidebar = () => {
                         <div key={i} className="grid grid-cols-1 gap-1">
                             {
                                 item.group !== null && (
-                                    <div className="text-on-surface-variant text-label-large my-1 flex flex-row items-center px-4">
+                                    <div className="text-on-surface-variant text-label-large mt-1 mb-2 flex flex-row items-center px-4">
                                         <div className="h-6 w-6 mr-2 rounded-full overflow-hidden">
                                             <LogoRender company={item.group}/>
                                         </div>
@@ -103,7 +123,7 @@ const Sidebar = () => {
                             }
                             {
                                 item.items.map((x, i) => (
-                                    <NavItem key={i} href={x.route} label={x.name} active={currentPath === x.route}/>
+                                    <NavItem key={i} version={x.version} href={x.route} label={x.name} active={currentPath === x.route}/>
                                 ))
                             }
                         </div>
