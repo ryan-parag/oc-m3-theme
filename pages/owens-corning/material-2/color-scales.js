@@ -1,4 +1,4 @@
-import { palette, theme } from "@/data/material-2/oc";
+import { palette, tabs } from "@/data/material-2/oc";
 import Sidebar from "@/components/Sidebar";
 import M2Palette from "@/components/M2Palette";
 import Header from "@/components/Header";
@@ -14,6 +14,7 @@ export default function Page() {
             download={palette}
             filename={'owens-corning-m2-palette.json'}
             company="Owens Corning"
+            tabs={tabs}
         />
         <div className="max-w-5xl mx-auto pt-5 px-4">
             <M2Palette palette={palette.scales}/>

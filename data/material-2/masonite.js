@@ -617,3 +617,16 @@ export const theme = {
         }
     }
 }
+
+export const tabs = [
+    {
+        name: 'Material 2',
+        route: '/masonite/material-2'
+    }, {
+        name: 'Color scales',
+        route: '/masonite/material-2/color-scales'
+    }, {
+        name: 'Schemes and tokens',
+        route: '/masonite/material-2/schemes-and-tokens'
+    }
+]

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import LogoRender from "../LogoRender";
 import React, { useState } from 'react';
+import MaterialLogo from '@/components/MaterialLogo';
 
 const TokenIcon = () => {
     return(
@@ -26,19 +27,15 @@ const PageLink = ({ version, name, route, company }) => {
                 onMouseLeave={() => setIsShown(false)}
             >
                 <div className="flex items-center isolate mb-6">
-                    <div class="bg-surface-container-highest border border-outline-variant size-16 p-2 grid place-items-center rounded-xl relative left-2.5 top-1.5 -rotate-6 shadow-lg group-hover:-translate-x-5 group-hover:-rotate-12 group-hover:-translate-y-0.5 transition duration-500 group-hover:duration-200">
-                        <div className="h-10 w-10 rounded-full overflow-hidden">
+                    <div class={`${company === 'Masonite' ? 'bg-masonite' : 'bg-ocRed'} border border-outline-variant size-16 p-0 grid place-items-center rounded-xl relative left-2.5 top-1.5 -rotate-6 shadow-lg group-hover:-translate-x-5 group-hover:-rotate-12 group-hover:-translate-y-0.5 transition duration-500 group-hover:duration-200 overflow-hidden`}>
+                        <div className="h-full w-full overflow-hidden">
                             <LogoRender company={company}/>
                         </div>
                     </div>
                     <div class="bg-surface-container-highest border border-outline-variant size-16 p-2 grid place-items-center rounded-xl z-10 shadow-lg group-hover:-translate-y-0.5 transition duration-500 group-hover:duration-200 relative">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <title>material_design</title>
-                            <rect width="24" height="24" fill="none"/>
-                            <path d="M21,12a9,9,0,0,0-2-5.62V17.63A8.78,8.78,0,0,0,21,12m-3.37,7H6.38a9.5,9.5,0,0,0,2.67,1.41A8.91,8.91,0,0,0,12,21,8.86,8.86,0,0,0,15,20.41,9.72,9.72,0,0,0,17.63,19M11,17,7,9v8h4m6-8-4,8h4V9m-5,5.53L15.75,7H8.25L12,14.53M17.63,5A8.91,8.91,0,0,0,6.38,5H17.63M5,17.63V6.38A9,9,0,0,0,3,12a8.78,8.78,0,0,0,2,5.63M23,12a10.57,10.57,0,0,1-3.22,7.78A10.57,10.57,0,0,1,12,23a10.59,10.59,0,0,1-7.78-3.22A10.57,10.57,0,0,1,1,12,10.59,10.59,0,0,1,4.22,4.22,10.59,10.59,0,0,1,12,1a10.57,10.57,0,0,1,7.78,3.22A10.59,10.59,0,0,1,23,12Z" fill="currentColor" strokeWidth={'2px'}/>
-                        </svg>
+                        <MaterialLogo/>
                     </div>
-                    <div class="bg-surface-container-highest border border-outline-variant size-16 p-2 grid place-items-center rounded-xl relative right-2.5 top-1.5 rotate-6 shadow-lg group-hover:translate-x-5 group-hover:rotate-12 group-hover:-translate-y-0.5 transition duration-500 group-hover:duration-200">
+                    <div class={`${ name === 'Color Scales' ? 'bg-warning-container-high text-on-warning-container-high' : 'bg-info-container-high text-on-info-container-high' } bg-info-container-high text-on-info-container-high border border-outline-variant size-16 p-2 grid place-items-center rounded-xl relative right-2.5 top-1.5 rotate-6 shadow-lg group-hover:translate-x-5 group-hover:rotate-12 group-hover:-translate-y-0.5 transition duration-500 group-hover:duration-200`}>
                         <span className="h-10 w-10 inline-flex items-center justify-center">
                             {
                                 name === 'Color Scales' ? (

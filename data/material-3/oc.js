@@ -330,3 +330,16 @@ export const theme = {
         }
     }
 }
+
+export const tabs = [
+    {
+        name: 'Material 3',
+        route: '/owens-corning/material-3'
+    }, {
+        name: 'Color scales',
+        route: '/owens-corning/material-3/color-scales'
+    }, {
+        name: 'Schemes and tokens',
+        route: '/owens-corning/material-3/schemes-and-tokens'
+    }
+]

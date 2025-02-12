@@ -1,6 +1,6 @@
 import Sidebar from "@/components/Sidebar";
 import M2Schemes from "@/components/M2Schemes";
-import { theme } from "@/data/material-2/oc";
+import { theme, tabs } from "@/data/material-2/oc";
 import Header from "@/components/Header";
 
 export default function Page() {
@@ -19,6 +19,7 @@ export default function Page() {
             download={theme}
             filename={filename}
             company="Owens Corning"
+            tabs={tabs}
         />
         <div className="max-w-5xl mx-auto pt-5 px-4">
           <div className="rounded-lg border border-outline-variant overflow-hidden">

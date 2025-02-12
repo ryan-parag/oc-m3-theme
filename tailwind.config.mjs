@@ -10,6 +10,9 @@ module.exports = {
       sans: ["Inter", 'sans-serif']
     },
     colors: {
+      masonite: '#92C83E',
+      ocRed: '#CE1126',
+      ocPink: '#D40F7D',
       primary: {
         0: '#000000',
         10: '#131908',
