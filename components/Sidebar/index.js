@@ -114,7 +114,7 @@ const Sidebar = () => {
                                 <div className="w-10">
                                     <LogoRender company="Owens Corning"/>
                                 </div>
-                                <span className="text-title-large font-bold ml-4">Material M3 Themes</span>
+                                <span className="text-title-large font-bold ml-4">Material Themes</span>
                             </div>
                         </Link>
                         <div className={`grid grid-cols-1 gap-2 px-4 mt-4`}>
