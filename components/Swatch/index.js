@@ -2,7 +2,7 @@ const Swatch = ({ name, value }) => {
     return(
         <div className="flex flex-col border border-outline-variant rounded-lg">
         <div
-            className={`h-8 rounded-tr-lg rounded-tl-lg w-full`}
+            className={`h-12 rounded-tr-lg rounded-tl-lg w-full`}
             style={{
                 backgroundColor: value
             }}
