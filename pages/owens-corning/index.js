@@ -6,6 +6,14 @@ export default function Page() {
 
     const pages = [
         {
+            version: '2',
+            name: 'Color Scales',
+            route: '/owens-corning/material-2/color-scales'
+        }, {
+            version: '2',
+            name: 'Schemes and Tokens',
+            route: '/owens-corning/material-2/schemes-and-tokens'
+        }, {
             version: '3',
             name: 'Color Scales',
             route: '/owens-corning/material-3/color-scales'

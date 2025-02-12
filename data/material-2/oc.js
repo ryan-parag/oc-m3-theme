@@ -52,34 +52,34 @@ export const palette = {
         },
 
         "brand" : {
-            "advisar" : {
-                "50": "#E0F4FD",
-                "100": "#B0E2F9",
-                "200": "#7BD0F5",
-                "300": "#43BDF1",
-                "400": "#00AFEF",
-                "500": "#00A1EC",
-                "600": "#0094DE",
-                "700": "#0081CA",
-                "800": "#0070B6",
-                "900": "#005195",
-                "1000a": "#003D5A",
-                "1100a": "#143341"
+            "ocPink" : {
+                "50": "#fce6f2",
+                "100": "#f9bfdf",
+                "200": "#f994ca",
+                "300": "#fa67b4",
+                "400": "#fb429f",
+                "500": "#fe0b8b",
+                "600": "#ec0d86",
+                "700": "#d40f7f",
+                "800": "#be0f79",
+                "900": "#960d70",
+                "1000a": "#5A1B49",
+                "1100a": "#310E27"
             },
-            "masonite" : {
-                "50": "#F2F9E8",
-                "100": "#DFEFC6",
-                "200": "#CAE4A1",
-                "300": "#B5D97B",
-                "400": "#A3D05D",
-                "500": "#92C83E",
-                "600": "#83B836",
-                "700": "#6EA42C",
-                "800": "#5A9023",
-                "900": "#356E0F",
-                "1000a": "#374C18",
-                "1100a": "#27340F"
-            },
+            "ocRed" : {
+                "50": "#ffebee",
+                "100": "#ffccd3",
+                "200": "#f3989b",
+                "300": "#eb6e73",
+                "400": "#f64a50",
+                "500": "#fc3435",
+                "600": "#ed2935",
+                "700": "#db1c2e",
+                "800": "#ce1127",
+                "900": "#c0001a",
+                "1000a": "#651520",
+                "1100a": "#390E14"
+            }
         },
 
         "states" : {
@@ -293,326 +293,326 @@ export const theme = {
     "tokens" : {
         "light" : {
             "text" : {
-                "default": "scales.neutrals.black.87",
-                "emphasis": "scales.neutrals.black.100",
-                "muted": "scales.neutrals.black.60",
-                "disabled": "scales.neutrals.black.42",
-                "contrast": "scales.neutrals.white.100"
+                "default": palette.scales.neutrals.black["87"],
+                "emphasis": palette.scales.neutrals.black["100"],
+                "muted": palette.scales.neutrals.black["60"],
+                "disabled": palette.scales.neutrals.black["42"],
+                "contrast": palette.scales.neutrals.white["100"]
             },
             "canvas" : {
-                "base": "scales.neutrals.surfaceGreyLight.50",
-                "card": "scales.neutrals.white.100",
-                "100": "scales.surfaceGreyLight.100",
-                "200": "scales.surfaceGreyLight.200",
-                "300": "scales.surfaceGreyLight.300",
-                "400": "scales.surfaceGreyLight.400"
+                "base": palette.scales.neutrals.surfaceGreyLight["50"],
+                "card": palette.scales.neutrals.white["100"],
+                "100": palette.scales.neutrals.surfaceGreyLight["100"],
+                "200": palette.scales.neutrals.surfaceGreyLight["200"],
+                "300": palette.scales.neutrals.surfaceGreyLight["300"],
+                "400": palette.scales.neutrals.surfaceGreyLight["400"]
             },
             "border" : {
-                "default": "scales.neutrals.black.12",
-                "emphasis": "scales.neutrals.black.38",
-                "disabled": "scales.neutrals.black.26",
-                "bold": "scales.neutrals.black.60"
+                "default": palette.scales.neutrals.black["12"],
+                "emphasis": palette.scales.neutrals.black["38"],
+                "disabled": palette.scales.neutrals.black["26"],
+                "bold": palette.scales.neutrals.black["60"]
             },
             "fill" : {
-                "default": "scales.neutrals.black.38",
-                "emphasis": "scales.neutrals.black.60",
-                "disabledPrimary": "scales.neutrals.black.26",
-                "disabledSecondary": "scales.neutrals.black.12",
-                "weak": "scales.neutrals.black.8"
+                "default": palette.scales.neutrals.black["38"],
+                "emphasis": palette.scales.neutrals.black["60"],
+                "disabledPrimary": palette.scales.neutrals.black["26"],
+                "disabledSecondary": palette.scales.neutrals.black["12"],
+                "weak": palette.scales.neutrals.black["8"]
             },
             "neutral" : {
-                "main": "scales.neutrals.surfaceGreyLight.700",
-                "light": "scales.neutrals.surfaceGreyLight.400",
-                "dark": "scales.neutrals.surfaceGreyLight.800",
-                "muted": "scales.neutrals.surfaceGreyLight.100",
-                "text": "scales.neutrals.surfaceGreyLight.800"
+                "main": palette.scales.neutrals.surfaceGreyLight["700"],
+                "light": palette.scales.neutrals.surfaceGreyLight["400"],
+                "dark": palette.scales.neutrals.surfaceGreyLight["800"],
+                "muted": palette.scales.neutrals.surfaceGreyLight["100"],
+                "text": palette.scales.neutrals.surfaceGreyLight["800"]
             },
-            "advisar" : {
-                "main": "scales.brand.advisar.700",
-                "light": "scales.brand.advisar.400",
-                "dark": "scales.brand.advisar.800",
-                "muted": "scales.brand.advisar.100",
-                "text": "scales.brand.advisar.900",
-                "card": "scales.brand.advisar.50"
+            "ocPink" : {
+                "main": palette.scales.brand.ocPink["700"],
+                "light": palette.scales.brand.ocPink["400"],
+                "dark": palette.scales.brand.ocPink["800"],
+                "muted": palette.scales.brand.ocPink["100"],
+                "text": palette.scales.brand.ocPink["900"],
+                "card": palette.scales.brand.ocPink["50"]
             },
-            "masonite" : {
-                "main": "scales.brand.masonite.700",
-                "light": "scales.brand.masonite.400",
-                "dark": "scales.brand.masonite.800",
-                "muted": "scales.brand.masonite.100",
-                "text": "scales.brand.masonite.900",
-                "card": "scales.brand.masonite.50"
+            "ocRed" : {
+                "main": palette.scales.brand.ocRed["700"],
+                "light": palette.scales.brand.ocRed["400"],
+                "dark": palette.scales.brand.ocRed["800"],
+                "muted": palette.scales.brand.ocRed["100"],
+                "text": palette.scales.brand.ocRed["900"],
+                "card": palette.scales.brand.ocRed["50"]
             },
             "info" : {
-                "main": "scales.states.info.700",
-                "light": "scales.states.info.400",
-                "dark": "scales.states.info.800",
-                "muted": "scales.states.info.100",
-                "text": "scales.states.info.900",
-                "card": "scales.states.info.50"
+                "main": palette.scales.states.info["700"],
+                "light": palette.scales.states.info["400"],
+                "dark": palette.scales.states.info["800"],
+                "muted": palette.scales.states.info["100"],
+                "text": palette.scales.states.info["900"],
+                "card": palette.scales.states.info["50"]
             },
             "success" : {
-                "main": "scales.states.success.700",
-                "light": "scales.states.success.400",
-                "dark": "scales.states.success.800",
-                "muted": "scales.states.success.100",
-                "text": "scales.states.success.900",
-                "card": "scales.states.success.50"
+                "main": palette.scales.states.success["700"],
+                "light": palette.scales.states.success["400"],
+                "dark": palette.scales.states.success["800"],
+                "muted": palette.scales.states.success["100"],
+                "text": palette.scales.states.success["900"],
+                "card": palette.scales.states.success["50"]
             },
             "warning" : {
-                "main": "scales.states.warning.700",
-                "light": "scales.states.warning.400",
-                "dark": "scales.states.warning.800",
-                "muted": "scales.states.warning.100",
-                "text": "scales.states.warning.900",
-                "card": "scales.states.warning.50"
+                "main": palette.scales.states.warning["700"],
+                "light": palette.scales.states.warning["400"],
+                "dark": palette.scales.states.warning["800"],
+                "muted": palette.scales.states.warning["100"],
+                "text": palette.scales.states.warning["900"],
+                "card": palette.scales.states.warning["50"]
             },
             "error" : {
-                "main": "scales.states.error.700",
-                "light": "scales.states.error.400",
-                "dark": "scales.states.error.800",
-                "muted": "scales.states.error.100",
-                "text": "scales.states.error.900",
-                "card": "scales.states.error.50"
+                "main": palette.scales.states.error["700"],
+                "light": palette.scales.states.error["400"],
+                "dark": palette.scales.states.error["800"],
+                "muted": palette.scales.states.error["100"],
+                "text": palette.scales.states.error["900"],
+                "card": palette.scales.states.error["50"]
             },
             "grey" : {
-                "main": "scales.mui.grey.700",
-                "light": "scales.mui.grey.400",
-                "dark": "scales.mui.grey.800",
-                "muted": "scales.mui.grey.100",
-                "text": "scales.mui.grey.900",
+                "main": palette.scales.mui.grey["700"],
+                "light": palette.scales.mui.grey["400"],
+                "dark": palette.scales.mui.grey["800"],
+                "muted": palette.scales.mui.grey["100"],
+                "text": palette.scales.mui.grey["900"],
             },
             "blueGrey" : {
-                "main": "scales.mui.blueGrey.700",
-                "light": "scales.mui.blueGrey.400",
-                "dark": "scales.mui.blueGrey.800",
-                "muted": "scales.mui.blueGrey.100",
-                "text": "scales.mui.blueGrey.900"
+                "main": palette.scales.mui.blueGrey["700"],
+                "light": palette.scales.mui.blueGrey["400"],
+                "dark": palette.scales.mui.blueGrey["800"],
+                "muted": palette.scales.mui.blueGrey["100"],
+                "text": palette.scales.mui.blueGrey["900"]
             },
             "lightGreen" : {
-                "main": "scales.mui.lightGreen.700",
-                "light": "scales.mui.lightGreen.400",
-                "dark": "scales.mui.lightGreen.800",
-                "muted": "scales.mui.lightGreen.100",
-                "text": "scales.mui.lightGreen.900"
+                "main": palette.scales.mui.lightGreen["700"],
+                "light": palette.scales.mui.lightGreen["400"],
+                "dark": palette.scales.mui.lightGreen["800"],
+                "muted": palette.scales.mui.lightGreen["100"],
+                "text": palette.scales.mui.lightGreen["900"]
             },
             "teal" : {
-                "main": "scales.mui.teal.700",
-                "light": "scales.mui.teal.400",
-                "dark": "scales.mui.teal.800",
-                "muted": "scales.mui.teal.100",
-                "text": "scales.mui.teal.900"
+                "main": palette.scales.mui.teal["700"],
+                "light": palette.scales.mui.teal["400"],
+                "dark": palette.scales.mui.teal["800"],
+                "muted": palette.scales.mui.teal["100"],
+                "text": palette.scales.mui.teal["900"]
             },
             "cyan" : {
-                "main": "scales.mui.cyan.700",
-                "light": "scales.mui.cyan.400",
-                "dark": "scales.mui.cyan.800",
-                "muted": "scales.mui.cyan.100",
-                "text": "scales.mui.cyan.900"
+                "main": palette.scales.mui.cyan["700"],
+                "light": palette.scales.mui.cyan["400"],
+                "dark": palette.scales.mui.cyan["800"],
+                "muted": palette.scales.mui.cyan["100"],
+                "text": palette.scales.mui.cyan["900"]
             },
             "blue" : {
-                "main": "scales.mui.blue.700",
-                "light": "scales.mui.blue.400",
-                "dark": "scales.mui.blue.800",
-                "muted": "scales.mui.blue.100",
-                "text": "scales.mui.blue.900"
+                "main": palette.scales.mui.blue["700"],
+                "light": palette.scales.mui.blue["400"],
+                "dark": palette.scales.mui.blue["800"],
+                "muted": palette.scales.mui.blue["100"],
+                "text": palette.scales.mui.blue["900"]
             },
             "indigo" : {
-                "main": "scales.mui.indigo.700",
-                "light": "scales.mui.indigo.400",
-                "dark": "scales.mui.indigo.800",
-                "muted": "scales.mui.indigo.100",
-                "text": "scales.mui.indigo.900"
+                "main": palette.scales.mui.indigo["700"],
+                "light": palette.scales.mui.indigo["400"],
+                "dark": palette.scales.mui.indigo["800"],
+                "muted": palette.scales.mui.indigo["100"],
+                "text": palette.scales.mui.indigo["900"]
             },
             "deepPurple" : {
-                "main": "scales.mui.deepPurple.700",
-                "light": "scales.mui.deepPurple.400",
-                "dark": "scales.mui.deepPurple.800",
-                "muted": "scales.mui.deepPurple.100",
-                "text": "scales.mui.deepPurple.900"
+                "main": palette.scales.mui.deepPurple["700"],
+                "light": palette.scales.mui.deepPurple["400"],
+                "dark": palette.scales.mui.deepPurple["800"],
+                "muted": palette.scales.mui.deepPurple["100"],
+                "text": palette.scales.mui.deepPurple["900"]
             },
             "purple" : {
-                "main": "scales.mui.purple.700",
-                "light": "scales.mui.purple.400",
-                "dark": "scales.mui.purple.800",
-                "muted": "scales.mui.purple.100",
-                "text": "scales.mui.purple.900"
+                "main": palette.scales.mui.purple["700"],
+                "light": palette.scales.mui.purple["400"],
+                "dark": palette.scales.mui.purple["800"],
+                "muted": palette.scales.mui.purple["100"],
+                "text": palette.scales.mui.purple["900"]
             },
             "pink" : {
-                "main": "scales.mui.pink.700",
-                "light": "scales.mui.pink.400",
-                "dark": "scales.mui.pink.800",
-                "muted": "scales.mui.pink.100",
-                "text": "scales.mui.pink.900"
+                "main": palette.scales.mui.pink["700"],
+                "light": palette.scales.mui.pink["400"],
+                "dark": palette.scales.mui.pink["800"],
+                "muted": palette.scales.mui.pink["100"],
+                "text": palette.scales.mui.pink["900"]
             },
             "amber" : {
-                "main": "scales.mui.amber.700",
-                "light": "scales.mui.amber.400",
-                "dark": "scales.mui.amber.800",
-                "muted": "scales.mui.amber.100",
-                "text": "scales.mui.amber.900"
+                "main": palette.scales.mui.amber["700"],
+                "light": palette.scales.mui.amber["400"],
+                "dark": palette.scales.mui.amber["800"],
+                "muted": palette.scales.mui.amber["100"],
+                "text": palette.scales.mui.amber["900"]
             }
         },
         "dark" : {
             "text" : {
-                "default": "scales.neutrals.white.87",
-                "emphasis": "scales.neutrals.white.100",
-                "muted": "scales.neutrals.white.60",
-                "disabled": "scales.neutrals.white.42",
-                "contrast": "scales.neutrals.black.100"
+                "default": palette.scales.neutrals.white["87"],
+                "emphasis": palette.scales.neutrals.white["100"],
+                "muted": palette.scales.neutrals.white["70"],
+                "disabled": palette.scales.neutrals.white["45"],
+                "contrast": palette.scales.neutrals.black["100"]
             },
             "canvas" : {
-                "base": "scales.neutrals.surfaceGreyDark.50",
-                "card": "scales.neutrals.surfaceGreyDark.900",
-                "100": "scales.neutrals.surfaceGreyDark.100",
-                "200": "scales.neutrals.surfaceGreyDark.200",
-                "300": "scales.neutrals.surfaceGreyDark.300",
-                "400": "scales.neutrals.surfaceGreyDark.400"
+                "base": palette.scales.neutrals.surfaceGreyDark["50"],
+                "card": palette.scales.neutrals.surfaceGreyLight["900"],
+                "100": palette.scales.neutrals.surfaceGreyDark["100"],
+                "200": palette.scales.neutrals.surfaceGreyDark["200"],
+                "300": palette.scales.neutrals.surfaceGreyDark["300"],
+                "400": palette.scales.neutrals.surfaceGreyDark["400"]
             },
             "border" : {
-                "default": "scales.neutrals.white.12",
-                "emphasis": "scales.neutrals.white.38",
-                "disabled": "scales.neutrals.white.26",
-                "bold": "scales.neutrals.white.70"
+                "default": palette.scales.neutrals.white["12"],
+                "emphasis": palette.scales.neutrals.white["38"],
+                "disabled": palette.scales.neutrals.white["26"],
+                "bold": palette.scales.neutrals.white["70"]
             },
             "fill" : {
-                "default": "scales.neutrals.white.38",
-                "emphasis": "scales.neutrals.white.70",
-                "disabledPrimary": "scales.neutrals.white.30",
-                "disabledSecondary": "scales.neutrals.white.26",
-                "weak": "scales.neutrals.white.8"
+                "default": palette.scales.neutrals.white["38"],
+                "emphasis": palette.scales.neutrals.white["70"],
+                "disabledPrimary": palette.scales.neutrals.white["30"],
+                "disabledSecondary": palette.scales.neutrals.white["26"],
+                "weak": palette.scales.neutrals.white["8"]
             },
             "neutral" : {
-                "main": "scales.neutrals.surfaceGreyLight.500",
-                "light": "scales.neutrals.surfaceGreyLight.300",
-                "dark": "scales.neutrals.surfaceGreyLight.700",
-                "muted": "scales.neutrals.surfaceGreyLight.800a",
-                "text": "scales.neutrals.surfaceGreyLight.300"
+                "main": palette.scales.neutrals.surfaceGreyLight["500"],
+                "light": palette.scales.neutrals.surfaceGreyLight["300"],
+                "dark": palette.scales.neutrals.surfaceGreyLight["700"],
+                "muted": palette.scales.neutrals.surfaceGreyLight["800a"],
+                "text": palette.scales.neutrals.surfaceGreyLight["300"]
             },
-            "advisar" : {
-                "main": "scales.brand.advisar.500",
-                "light": "scales.brand.advisar.300",
-                "dark": "scales.brand.advisar.700",
-                "muted": "#scales.brand.advisar.1000a",
-                "text": "scales.brand.advisar.300",
-                "card": "scales.brand.advisar.1100a"
+            "ocPink" : {
+                "main": palette.scales.brand.ocPink["500"],
+                "light": palette.scales.brand.ocPink["300"],
+                "dark": palette.scales.brand.ocPink["700"],
+                "muted": palette.scales.brand.ocPink["1000a"],
+                "text": palette.scales.brand.ocPink["300"],
+                "card": palette.scales.brand.ocPink["1100a"]
             },
-            "masonite" : {
-                "main": "scales.brand.masonite.500",
-                "light": "scales.brand.masonite.300",
-                "dark": "scales.brand.masonite.700",
-                "muted": "scales.brand.masonite.1000a",
-                "text": "scales.brand.masonite.300",
-                "card": "scales.brand.masonite.1100a"
+            "ocRed" : {
+                "main": palette.scales.brand.ocRed["500"],
+                "light": palette.scales.brand.ocRed["300"],
+                "dark": palette.scales.brand.ocRed["700"],
+                "muted": palette.scales.brand.ocRed["1000a"],
+                "text": palette.scales.brand.ocRed["300"],
+                "card": palette.scales.brand.ocRed["1100a"]
             },
             "info" : {
-                "main": "scales.states.info.500",
-                "light": "scales.states.info.300",
-                "dark": "scales.states.info.700",
-                "muted": "scales.states.info.1000a",
-                "text": "scales.states.info.300",
-                "card": "scales.states.info.1100a"
+                "main": palette.scales.states.info["500"],
+                "light": palette.scales.states.info["300"],
+                "dark": palette.scales.states.info["700"],
+                "muted": palette.scales.states.info["1000a"],
+                "text": palette.scales.states.info["300"],
+                "card": palette.scales.states.info["1100a"]
             },
             "success" : {
-                "main": "scales.states.success.500",
-                "light": "scales.states.success.300",
-                "dark": "scales.states.success.700",
-                "muted": "scales.states.success.1000a",
-                "text": "scales.states.success.300",
-                "card": "scales.states.success.1100a"
+                "main": palette.scales.states.success["500"],
+                "light": palette.scales.states.success["300"],
+                "dark": palette.scales.states.success["700"],
+                "muted": palette.scales.states.success["1000a"],
+                "text": palette.scales.states.success["300"],
+                "card": palette.scales.states.success["1100a"]
             },
             "warning" : {
-                "main": "scales.states.warning.500",
-                "light": "scales.states.warning.300",
-                "dark": "scales.states.warning.700",
-                "muted": "scales.states.warning.1000a",
-                "text": "scales.states.warning.300",
-                "card": "scales.states.warning.1100a"
+                "main": palette.scales.states.warning["500"],
+                "light": palette.scales.states.warning["300"],
+                "dark": palette.scales.states.warning["700"],
+                "muted": palette.scales.states.warning["1000a"],
+                "text": palette.scales.states.warning["300"],
+                "card": palette.scales.states.warning["1100a"]
             },
             "error" : {
-                "main": "scales.states.error.500",
-                "light": "scales.states.error.300",
-                "dark": "scales.states.error.700",
-                "muted": "scales.states.error.1000a",
-                "text": "scales.states.error.300",
-                "card": "scales.states.error.1100a"
+                "main": palette.scales.states.error["500"],
+                "light": palette.scales.states.error["300"],
+                "dark": palette.scales.states.error["700"],
+                "muted": palette.scales.states.error["1000a"],
+                "text": palette.scales.states.error["300"],
+                "card": palette.scales.states.error["1100a"]
             },
             "grey" : {
-                "main": "scales.mui.grey.500",
-                "light": "scales.mui.grey.300",
-                "dark": "scales.mui.grey.700",
-                "muted": "scales.mui.grey.800a",
-                "text": "scales.mui.grey.300",
+                "main": palette.scales.mui.grey["500"],
+                "light": palette.scales.mui.grey["300"],
+                "dark": palette.scales.mui.grey["700"],
+                "muted": palette.scales.mui.grey["800a"],
+                "text": palette.scales.mui.grey["300"],
             },
             "blueGrey" : {
-                "main": "scales.mui.blueGrey.500",
-                "light": "scales.mui.blueGrey.300",
-                "dark": "scales.mui.blueGrey.700",
-                "muted": "scales.mui.blueGrey.1000a",
-                "text": "scales.mui.blueGrey.300"
+                "main": palette.scales.mui.blueGrey["500"],
+                "light": palette.scales.mui.blueGrey["300"],
+                "dark": palette.scales.mui.blueGrey["700"],
+                "muted": palette.scales.mui.blueGrey["1000a"],
+                "text": palette.scales.mui.blueGrey["300"]
             },
             "lightGreen" : {
-                "main": "scales.mui.lightGreen.500",
-                "light": "scales.mui.lightGreen.300",
-                "dark": "scales.mui.lightGreen.700",
-                "muted": "scales.mui.lightGreen.1000a",
-                "text": "scales.mui.lightGreen.300"
+                "main": palette.scales.mui.lightGreen["500"],
+                "light": palette.scales.mui.lightGreen["300"],
+                "dark": palette.scales.mui.lightGreen["700"],
+                "muted": palette.scales.mui.lightGreen["1000a"],
+                "text": palette.scales.mui.lightGreen["300"]
             },
             "teal" : {
-                "main": "scales.mui.teal.500",
-                "light": "scales.mui.teal.300",
-                "dark": "scales.mui.teal.700",
-                "muted": "scales.mui.teal.1000a",
-                "text": "scales.mui.teal.300"
+                "main": palette.scales.mui.teal["500"],
+                "light": palette.scales.mui.teal["300"],
+                "dark": palette.scales.mui.teal["700"],
+                "muted": palette.scales.mui.teal["1000a"],
+                "text": palette.scales.mui.teal["300"]
             },
             "cyan" : {
-                "main": "scales.mui.cyan.500",
-                "light": "scales.mui.cyan.300",
-                "dark": "scales.mui.cyan.700",
-                "muted": "scales.mui.cyan.1000a",
-                "text": "scales.mui.cyan.300"
+                "main": palette.scales.mui.cyan["500"],
+                "light": palette.scales.mui.cyan["300"],
+                "dark": palette.scales.mui.cyan["700"],
+                "muted": palette.scales.mui.cyan["1000a"],
+                "text": palette.scales.mui.cyan["300"]
             },
             "blue" : {
-                "main": "scales.mui.blue.500",
-                "light": "scales.mui.blue.300",
-                "dark": "scales.mui.blue.700",
-                "muted": "scales.mui.blue.1000a",
-                "text": "scales.mui.blue.300"
+                "main": palette.scales.mui.blue["500"],
+                "light": palette.scales.mui.blue["300"],
+                "dark": palette.scales.mui.blue["700"],
+                "muted": palette.scales.mui.blue["1000a"],
+                "text": palette.scales.mui.blue["300"]
             },
             "indigo" : {
-                "main": "scales.mui.indigo.500",
-                "light": "scales.mui.indigo.300",
-                "dark": "scales.mui.indigo.700",
-                "muted": "scales.mui.indigo.1000a",
-                "text": "scales.mui.indigo.300"
+                "main": palette.scales.mui.indigo["500"],
+                "light": palette.scales.mui.indigo["300"],
+                "dark": palette.scales.mui.indigo["700"],
+                "muted": palette.scales.mui.indigo["1000a"],
+                "text": palette.scales.mui.indigo["300"]
             },
             "deepPurple" : {
-                "main": "scales.mui.deepPurple.500",
-                "light": "scales.mui.deepPurple.300",
-                "dark": "scales.mui.deepPurple.700",
-                "muted": "scales.mui.deepPurple.1000a",
-                "text": "scales.mui.deepPurple.300"
+                "main": palette.scales.mui.deepPurple["500"],
+                "light": palette.scales.mui.deepPurple["300"],
+                "dark": palette.scales.mui.deepPurple["700"],
+                "muted": palette.scales.mui.deepPurple["1000a"],
+                "text": palette.scales.mui.deepPurple["300"]
             },
             "purple" : {
-                "main": "scales.mui.purple.500",
-                "light": "scales.mui.purple.300",
-                "dark": "scales.mui.purple.700",
-                "muted": "scales.mui.purple.1000a",
-                "text": "scales.mui.purple.300"
+                "main": palette.scales.mui.purple["500"],
+                "light": palette.scales.mui.purple["300"],
+                "dark": palette.scales.mui.purple["700"],
+                "muted": palette.scales.mui.purple["1000a"],
+                "text": palette.scales.mui.purple["300"]
             },
             "pink" : {
-                "main": "scales.mui.pink.500",
-                "light": "scales.mui.pink.300",
-                "dark": "scales.mui.pink.700",
-                "muted": "scales.mui.pink.1000a",
-                "text": "scales.mui.pink.300"
+                "main": palette.scales.mui.pink["500"],
+                "light": palette.scales.mui.pink["300"],
+                "dark": palette.scales.mui.pink["700"],
+                "muted": palette.scales.mui.pink["1000a"],
+                "text": palette.scales.mui.pink["300"]
             },
             "amber" : {
-                "main": "scales.mui.amber.500",
-                "light": "scales.mui.amber.300",
-                "dark": "scales.mui.amber.700",
-                "muted": "scales.mui.amber.1000a",
-                "text": "scales.mui.amber.300"
+                "main": palette.scales.mui.amber["500"],
+                "light": palette.scales.mui.amber["300"],
+                "dark": palette.scales.mui.amber["700"],
+                "muted": palette.scales.mui.amber["1000a"],
+                "text": palette.scales.mui.amber["300"]
             }
         }
     }

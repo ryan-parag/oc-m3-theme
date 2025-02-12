@@ -43,6 +43,14 @@ const Sidebar = () => {
             items: [
                 {
                     name: 'Color Scales',
+                    route: '/owens-corning/material-2/color-scales',
+                    version: 'Material 2'
+                }, {
+                    name: 'Schemes and Tokens',
+                    route: '/owens-corning/material-2/schemes-and-tokens',
+                    version: 'Material 2'
+                },{
+                    name: 'Color Scales',
                     route: '/owens-corning/material-3/color-scales',
                     version: 'Material 3'
                 }, {
@@ -81,7 +89,7 @@ const Sidebar = () => {
             {
                 isHidden && (
                     <button
-                        className={`inline-flex items-center justify-center h-10 w-10 rounded-lg bg-surface-container-highest border border-outline-variant fixed top-5 left-6 z-10 shadow-md`}
+                        className={`inline-flex items-center justify-center h-10 w-10 rounded-lg bg-surface-container-highest dark:hover:bg-neutral-20 hover:bg-neutral-95 border border-outline-variant fixed top-5 left-6 z-10 shadow-md`}
                         onClick={() => setIsHidden(false)}
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
@@ -95,7 +103,7 @@ const Sidebar = () => {
                             !isHidden && (
                                 <button
                                     onClick={() => setIsHidden(true)}
-                                    className={'inline-flex items-center justify-center h-10 w-10 rounded-lg bg-surface-container-highest border border-outline-variant shadow-md absolute top-5 -right-4'}
+                                    className={'inline-flex items-center justify-center h-10 w-10 rounded-lg bg-surface-container-highest dark:hover:bg-neutral-20 hover:bg-neutral-95 border border-outline-variant shadow-md absolute top-5 -right-4'}
                                 >
                                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg>
                                 </button>

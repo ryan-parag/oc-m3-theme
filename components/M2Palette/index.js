@@ -36,7 +36,7 @@ const Row = ({ section }) => {
     )
 }
 
-const M2Palette = ({ palette, company }) => {
+const M2Palette = ({ palette }) => {
 
     const getPalette = () => {
 

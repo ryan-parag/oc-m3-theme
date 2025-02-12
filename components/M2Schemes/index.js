@@ -8,11 +8,10 @@ const SectionTitle = ({ children }) => {
     )
 }
 
-const M2Schemes = ({ theme, mode }) => {
-
-    return(
-        <Collapse title={`${mode}`}>
-            <div className="grid grid-cols-6 gap-2">
+const BrandTokens = ({ theme }) => {
+    if(theme.masonite) {
+        return(
+            <>
                 <SectionTitle>Masonite</SectionTitle>
                 <TokenBlock color={theme.masonite.main} text={theme.text.contrast}>masonite.main</TokenBlock>
                 <TokenBlock color={theme.masonite.light} text={theme.text.default}>masonite.light</TokenBlock>
@@ -27,6 +26,36 @@ const M2Schemes = ({ theme, mode }) => {
                 <TokenBlock color={theme.advisar.muted} text={theme.text.default}>advisar.muted</TokenBlock>
                 <TokenBlock color={theme.advisar.text} text={theme.text.contrast}>advisar.text</TokenBlock>
                 <TokenBlock color={theme.advisar.card} text={theme.text.default}>advisar.card</TokenBlock>
+            </>
+        )
+    } else {
+        return(
+            <>
+                <SectionTitle>OC Pink</SectionTitle>
+                <TokenBlock color={theme.ocPink.main} text={theme.text.contrast}>ocPink.main</TokenBlock>
+                <TokenBlock color={theme.ocPink.light} text={theme.text.default}>ocPink.light</TokenBlock>
+                <TokenBlock color={theme.ocPink.dark} text={theme.text.contrast}>ocPink.dark</TokenBlock>
+                <TokenBlock color={theme.ocPink.muted} text={theme.text.default}>ocPink.muted</TokenBlock>
+                <TokenBlock color={theme.ocPink.text} text={theme.text.contrast}>ocPink.text</TokenBlock>
+                <TokenBlock color={theme.ocPink.card} text={theme.text.default}>ocPink.card</TokenBlock>
+                <SectionTitle>OC Red</SectionTitle>
+                <TokenBlock color={theme.ocRed.main} text={theme.text.contrast}>ocRed.main</TokenBlock>
+                <TokenBlock color={theme.ocRed.light} text={theme.text.default}>ocRed.light</TokenBlock>
+                <TokenBlock color={theme.ocRed.dark} text={theme.text.contrast}>adocRedvisar.dark</TokenBlock>
+                <TokenBlock color={theme.ocRed.muted} text={theme.text.default}>ocRed.muted</TokenBlock>
+                <TokenBlock color={theme.ocRed.text} text={theme.text.contrast}>ocRed.text</TokenBlock>
+                <TokenBlock color={theme.ocRed.card} text={theme.text.default}>ocRed.card</TokenBlock>
+            </>
+        )
+    }
+}
+
+const M2Schemes = ({ theme, mode }) => {
+
+    return(
+        <Collapse title={`${mode}`}>
+            <div className="grid grid-cols-6 gap-2">
+                <BrandTokens theme={theme}/>
                 <SectionTitle>Canvas</SectionTitle>
                 <TokenBlock color={theme.canvas.base} text={theme.text.default}>canvas.base</TokenBlock>
                 <TokenBlock color={theme.canvas.card} text={theme.text.default}>canvas.card</TokenBlock>
