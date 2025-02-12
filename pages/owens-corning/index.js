@@ -1,6 +1,8 @@
 import Sidebar from "@/components/Sidebar";
 import Header from "../../components/Header";
 import PageLink from "@/components/PageLink";
+import DocumentationLink from "@/components/DocumentationLink";
+import MaterialLogo from "@/components/MaterialLogo";
 
 export default function Page() {
 
@@ -34,6 +36,18 @@ export default function Page() {
         />
         <div className="max-w-5xl mx-auto pt-5 px-4">
           <div className="grid grid-cols-2 gap-4">
+            <DocumentationLink
+                icon={<MaterialLogo/>}
+                label={'Material 3 documentation'}
+                description={'Material 3 is the latest version of Google’s open-source design system.'}
+                href={'https://m3.material.io/'}
+            />
+            <DocumentationLink
+                icon={<MaterialLogo/>}
+                label={'Material 2 documentation'}
+                description={'Material 2 is the legacy version of Google’s open-source design system.'}
+                href={'https://m2.material.io/'}
+            />
             {
                 pages.map((item, i) => (
                     <PageLink
