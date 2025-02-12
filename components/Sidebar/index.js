@@ -1,7 +1,6 @@
-import OCLogo from "@/components/OCLogo";
-import MasoniteLogo from "../MasoniteLogo";
+import LogoRender from '../LogoRender';
 import Link from "next/link";
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
 const NavItem = ({ href, label, active, version }) => {
 
@@ -21,31 +20,6 @@ const NavItem = ({ href, label, active, version }) => {
     )
 }
 
-const LogoRender = ({ company }) => {
-
-    const getLogo = (x) => {
-        switch(x) {
-            case 'Masonite':
-                return <MasoniteLogo/>
-                break;
-            case 'Owens Corning':
-                return <OCLogo/>
-                break;
-            default:
-                return null
-                break;
-        }
-    }
-
-    return(
-        <>
-            {
-                getLogo(company)
-            }
-        </>
-    )
-}
-
 const Sidebar = () => {
 
     const currentPath = usePathname();
@@ -53,6 +27,7 @@ const Sidebar = () => {
     const navItems = [
         {
             group: null,
+            parent: '/',
             items: [
                 {
                     name: 'Home',
@@ -62,6 +37,7 @@ const Sidebar = () => {
             ]
         }, {
             group: 'Owens Corning',
+            parent: '/owens-corning',
             items: [
                 {
                     name: 'Color Scales',
@@ -75,6 +51,7 @@ const Sidebar = () => {
             ]
         }, {
             group: 'Masonite',
+            parent: '/masonite',
             items: [
                 {
                     name: 'Color Scales',
@@ -102,7 +79,7 @@ const Sidebar = () => {
             <Link href="/">
                 <div className="flex items-center p-4 border-b border-outline-variant">
                     <div className="w-10">
-                        <OCLogo/>
+                        <LogoRender company="Owens Corning"/>
                     </div>
                     <span className="text-title-large font-bold ml-4">Material M3 Themes</span>
                 </div>
@@ -113,12 +90,14 @@ const Sidebar = () => {
                         <div key={i} className="grid grid-cols-1 gap-1">
                             {
                                 item.group !== null && (
-                                    <div className="text-on-surface-variant text-label-large mt-1 mb-2 flex flex-row items-center px-4">
-                                        <div className="h-6 w-6 mr-2 rounded-full overflow-hidden">
-                                            <LogoRender company={item.group}/>
+                                    <Link href={item.parent}>
+                                        <div className="text-on-surface-variant text-label-large mt-1 mb-2 flex flex-row items-center px-4 hover:underline">
+                                            <div className="h-6 w-6 mr-2 rounded-full overflow-hidden">
+                                                <LogoRender company={item.group}/>
+                                            </div>
+                                            <span className="opacity-60 font-medium">{item.group}</span>
                                         </div>
-                                        <span className="opacity-60 font-medium">{item.group}</span>
-                                    </div>
+                                    </Link>
                                 )
                             }
                             {

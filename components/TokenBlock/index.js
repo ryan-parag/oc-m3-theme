@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import CopyButton from "@/components/CopyButton";
 
 const TokenBlock = ({ color, text, children}) => {
     const [isShown, setIsShown] = useState(false);
     return(
         <div
-            className="flex flex-col items-start w-full h-16 text-xs px-2 py-2 truncate"
+            className="flex flex-col items-start w-full h-20 text-xs px-2 py-2 truncate"
             style={{
                 color: text,
                 backgroundColor: color
@@ -12,9 +13,13 @@ const TokenBlock = ({ color, text, children}) => {
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}
         >
-            {children}
+            <CopyButton ghost copyText={children} text={children}/>
             {
-                isShown && (<span className="opacity-50 mt-1">{color}</span>)
+                isShown && (
+                    <div className="mt-1">
+                        <CopyButton copyText={color} text={color}/>
+                    </div>
+            )
             }
         </div>
     )
