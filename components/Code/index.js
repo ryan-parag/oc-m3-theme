@@ -1,5 +1,5 @@
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { duotoneSpace } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { theme } from './theme';
 
 const Code = ({ children }) => {
   return(
