@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const CopyButton = ({ copyText, text, ghost }) => {
+const CopyButton = ({ copyText, text, ghost, large }) => {
     const [isCopied, setIsCopied] = useState(false);
   
     async function copyTextToClipboard(text) {
@@ -32,9 +32,9 @@ const CopyButton = ({ copyText, text, ghost }) => {
             <input className="hidden opacity-0 h-0 w-0 absolute -z-10" type="text" value={copyText} readOnly />
             <button
                 onClick={handleCopyClick}
-                className={`transition justify-center text-label-small inline-flex rounded-md py-1 px-2 hover:underline ${ghost ? 'hover:bg-neutral-0 hover:text-neutral-100' : 'bg-[#00000087] hover:bg-[#000000] text-neutral-100'}`}
+                className={large ? `transition border border-outline-variant px-4 py-2 rounded-lg bg-transparent dark:hover:bg-neutral-20 hover:bg-neutral-95 inline-flex justify-center` : `transition justify-center text-label-small inline-flex rounded-md py-1 px-2 hover:underline ${ghost ? 'hover:bg-neutral-0 hover:text-neutral-100' : 'bg-[#00000087] hover:bg-[#000000] text-neutral-100'}`}
             >
-                <span>{isCopied ? 'Copied!' : text}</span>
+                <span>{isCopied ? '✅ Copied!' : text}</span>
             </button>
         </div>
     )
