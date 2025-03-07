@@ -19,7 +19,7 @@ const Swatch = ({ name, value }) => {
             >
                 {
                     isShown && (
-                        <CopyButton copyText={value} text={value}/>
+                        <CopyButton copyText={value.toUpperCase()} text={value.toUpperCase()}/>
                     )
                 }
             </div>
@@ -27,7 +27,7 @@ const Swatch = ({ name, value }) => {
                 <span  className="text-label-medium font-bold">
                     {name}
                 </span>
-                <span  className="text-label-small text-on-surface-variant">
+                <span  className="text-label-small text-on-surface-variant uppercase">
                     {value}
                 </span>
             </div>
